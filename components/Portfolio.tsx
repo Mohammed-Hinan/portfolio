@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useState, useEffect } from 'react'
 import { GithubIcon, LinkedinIcon, MailIcon, InstagramIcon } from 'lucide-react'
 
@@ -22,7 +20,7 @@ const Portfolio = () => {
   ]
 
   const sections = ['home', 'about', 'case-studies']
-  
+
   useEffect(() => {
     // Initial page load animation
     setIsLoading(false)
@@ -47,7 +45,6 @@ const Portfolio = () => {
   // Scroll event listener and direction detection
   useEffect(() => {
     let lastScrollY = window.scrollY
-    let scrollTimeout: NodeJS.Timeout
 
     const handleScroll = (e: WheelEvent) => {
       e.preventDefault()
@@ -73,7 +70,7 @@ const Portfolio = () => {
           setActiveSection(sections[targetIndex])
           
           // Reset scrolling state after animation
-          setTimeout(() => {
+          const scrollTimeout = setTimeout(() => {
             setIsScrolling(false)
           }, 1000) // Adjust timing based on your scroll animation duration
         }
@@ -84,7 +81,6 @@ const Portfolio = () => {
 
     return () => {
       window.removeEventListener('wheel', handleScroll)
-      clearTimeout(scrollTimeout)
     }
   }, [activeSection, sections, isScrolling])
 
