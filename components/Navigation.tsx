@@ -11,7 +11,7 @@ const menuItems = [
   { name: 'Case Studies', href: '/case-studies' },
 ]
 
-const RESUME_URL = "https://drive.google.com/file/d/12MpntYPP8d6xEn5ta0aZqAihdpqMB7be/view"
+const RESUME_URL = "https://drive.google.com/file/d/14aii4GIyyTVmF07Eunf7PLCL-jwOw6lN/view"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
