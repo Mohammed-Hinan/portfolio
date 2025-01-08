@@ -1,11 +1,8 @@
-// next.config.js
 module.exports = {
-    trailingSlash: true, // Use this instead of exportTrailingSlash
-    output: 'export', // This enables static export mode
+    trailingSlash: true, // Ensures URLs have trailing slashes
+    output: 'export', // Enables static export mode
     images: {
-      unoptimized: true, // Optional: to allow images without optimization
+      unoptimized: true, // Disable image optimization for static export
     },
-    // Optional: configure trailing slashes for exported URLs
-    exportTrailingSlash: true,
-  }
+  };
   
